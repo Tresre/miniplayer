@@ -5,7 +5,6 @@
   @import url(https://fonts.googleapis.com/css2?family=Source+Code+Pro);
 </style>
 <body>
-
   <div class="musicplayer">
     <label class="play">
       <input type="checkbox" id="musicToggle" onclick="musicPlayer()">
@@ -26,19 +25,16 @@
 
   <audio id="Down In Kokomo">
     <source src="http://sndup.net/g635/d" type="audio/mpeg" autostart="false" width="500" height="90" loop="true">
-
     Your browser does not support the <code>audio</code> element.
   </audio>
 
   <audio id="Send Me An Angel">
     <source src="http://sndup.net/mkvy/d" type="audio/mpeg" autostart="false" width="500" height="90" loop="true">
-
     Your browser does not support the <code>audio</code> element.
   </audio>
 
   <audio id="Gotta Get Up">
     <source src="http://sndup.net/xy7q/d" type="audio/mpeg" autostart="false" width="500" height="90" loop="true">
-
     Your browser does not support the <code>audio</code> element.
   </audio>
 
@@ -51,6 +47,7 @@ chooseSong();
 var endmusic = music;
 endmusic.onended = function() {
   skipSong();
+  alert("The audio has ended");
 };
 
 function skipSong(){
@@ -65,7 +62,6 @@ function skipSong(){
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
   songChoice = (randomItem);
   document.getElementById("songChoice").innerHTML = songChoice;
-
   music = document.getElementById(randomItem);
   music.play();
   music.currentTime = 0;
@@ -82,18 +78,9 @@ function chooseSong(){
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
   songChoice = (randomItem);
   document.getElementById("songChoice").innerHTML = songChoice;
-
   music = document.getElementById(randomItem);
 
-
-  }
-
-function muteMusic(){
-  music.volume = 0;
-  }
-function unmuteMusic(){
-  music.volume = 1;
-  }
+}
 
 function musicVolume() {
   var checkBox = document.getElementById("musicMute");
@@ -110,7 +97,6 @@ function musicPlayer() {
   var setmusic = music;
   if (checkBox.checked == true){
     setmusic.play();
-    setmusic.volume = 1;
   } else {
     setmusic.pause();
   }

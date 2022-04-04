@@ -44,14 +44,13 @@
 
 
 <script>
-
 var music;
 var songChoice;
-chooseSong()
+chooseSong();
 
 var endmusic = music;
 endmusic.onended = function() {
-  alert("The audio has ended");
+  skipSong();
 };
 
 function skipSong(){
@@ -108,7 +107,7 @@ function musicVolume() {
 
 function musicPlayer() {
   var checkBox = document.getElementById("musicToggle");
-  var setmusic = music
+  var setmusic = music;
   if (checkBox.checked == true){
     setmusic.play();
     setmusic.volume = 1;

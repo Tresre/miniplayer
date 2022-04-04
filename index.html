@@ -17,7 +17,7 @@
     </label>
 
     <h1 class="vibing">What I'm Vibing</h1>
-    <span id="songChoice" class="songname" onclick="skipSong()" style="cursor: pointer;"></span>
+    <span id="songChoice" class="songname" onclick="chooseSong(1)" style="cursor: pointer;"></span>
 
   </div>
 
@@ -42,11 +42,11 @@
 <script>
 var music;
 var songChoice;
-chooseSong();
+chooseSong(1);
 
 var endmusic = music;
 endmusic.onended = function() {
-  skipSong();
+  chooseSong();
   alert("The audio has ended");
 };
 
@@ -68,7 +68,7 @@ function skipSong(){
   
 }
 
-function chooseSong(){
+function chooseSong(num){
   var playlist = [
   "Down In Kokomo",
   "Send Me An Angel",
@@ -78,8 +78,16 @@ function chooseSong(){
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
   songChoice = (randomItem);
   document.getElementById("songChoice").innerHTML = songChoice;
+  
+  var setmusic = music
+  setmusic.pause();
   music = document.getElementById(randomItem);
-
+  
+  if (num === 1){
+  	var setmusic = music
+    setmusic.play();
+  	setmusic.currentTime = 0;
+  }
 }
 
 function musicVolume() {

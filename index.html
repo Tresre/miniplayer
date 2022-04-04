@@ -10,34 +10,26 @@
       <input type="checkbox" id="musicToggle" onclick="musicPlayer()">
       <span class="playtoggle"><img src="https://media4.giphy.com/media/XaejLonqk19jDugJbq/giphy.gif?" alt="" style="width:90px; height:90px; border-radius: 90px; object-fit: cover;"></span>
     </label>
-
     <label class="button">
       <input class="bslider" type="checkbox" id="musicMute" onclick="musicVolume()" checked>
       <span class="bslider"></span>
     </label>
-
     <h1 class="vibing">What I'm Vibing</h1>
     <span id="songChoice" class="songname" onclick="chooseSong(1)" style="cursor: pointer;"></span>
-
   </div>
-
-
 
   <audio id="Down In Kokomo">
     <source src="http://sndup.net/g635/d" type="audio/mpeg" autostart="false" width="500" height="90" loop="true">
     Your browser does not support the <code>audio</code> element.
   </audio>
-
   <audio id="Send Me An Angel">
     <source src="http://sndup.net/mkvy/d" type="audio/mpeg" autostart="false" width="500" height="90" loop="true">
     Your browser does not support the <code>audio</code> element.
   </audio>
-
   <audio id="Gotta Get Up">
     <source src="http://sndup.net/xy7q/d" type="audio/mpeg" autostart="false" width="500" height="90" loop="true">
     Your browser does not support the <code>audio</code> element.
   </audio>
-
 
 <script>
 var music;
@@ -68,7 +60,6 @@ function chooseSong(p) {
   	chooseSong(1);
     return;
   } else {
-    
     songChoice = (randomItem);
     document.getElementById("songChoice").innerHTML = songChoice;
     music = document.getElementById(randomItem);

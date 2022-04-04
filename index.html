@@ -36,13 +36,6 @@ var music;
 var songChoice;
 chooseSong(0);
 
-setInterval(function(){ 
-  var endmusic = music;
-  endmusic.onended = function() {
-    chooseSong(1);
-  };
-}, 3000);
-
 function chooseSong(p) {
   var lastSong = songChoice;
   var playlist = [
@@ -65,10 +58,19 @@ function chooseSong(p) {
     songChoice = (randomItem);
     document.getElementById("songChoice").innerHTML = songChoice;
     music = document.getElementById(randomItem);
+    music.onended = function() {
+      chooseSong(1);
+    };
 
     if (p === 1) {
       music.play();
       music.currentTime = 0;
+      var checkBox = document.getElementById("musicMute");
+      if (checkBox.checked == true) {
+        music.volume = 1;
+      } else {
+        music.volume = 0;
+      }
     }
   }
 }

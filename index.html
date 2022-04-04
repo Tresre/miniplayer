@@ -50,6 +50,7 @@ endmusic.onended = function() {
 };
 
 function chooseSong(p) {
+  var lastSong = songChoice;
   var playlist = [
   "Down In Kokomo",
   "Send Me An Angel",
@@ -57,13 +58,25 @@ function chooseSong(p) {
   ];
 
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
-  songChoice = (randomItem);
-  document.getElementById("songChoice").innerHTML = songChoice;
-  music = document.getElementById(randomItem);
   
-  if (p === 1) {
-    music.play();
-  	music.currentTime = 0;
+  var setmusic = music;
+  if (setmusic !== undefined) {
+  	setmusic.pause();
+  }
+  
+  if (lastSong === randomItem) {
+  	chooseSong(1);
+    return;
+  } else {
+    
+    songChoice = (randomItem);
+    document.getElementById("songChoice").innerHTML = songChoice;
+    music = document.getElementById(randomItem);
+
+    if (p === 1) {
+      music.play();
+      music.currentTime = 0;
+    }
   }
 }
 

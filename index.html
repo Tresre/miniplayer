@@ -36,10 +36,12 @@ var music;
 var songChoice;
 chooseSong(0);
 
-var endmusic = music;
-endmusic.onended = function() {
-  chooseSong(1);
-};
+setInterval(function(){ 
+  var endmusic = music;
+  endmusic.onended = function() {
+    chooseSong(1);
+  };
+}, 3000);
 
 function chooseSong(p) {
   var lastSong = songChoice;

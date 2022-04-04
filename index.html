@@ -49,6 +49,11 @@ var music;
 var songChoice;
 chooseSong()
 
+var endmusic = music;
+endmusic.onended = function() {
+  alert("The audio has ended");
+};
+
 function skipSong(){
   var setmusic = music
   setmusic.pause();
@@ -93,7 +98,7 @@ function unmuteMusic(){
 
 function musicVolume() {
   var checkBox = document.getElementById("musicMute");
-  var setmusic = music
+  var setmusic = music;
   if (checkBox.checked == true){
     setmusic.volume = 1;
   } else {

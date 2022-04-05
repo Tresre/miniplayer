@@ -3,7 +3,7 @@ Very simple music player made using HTML, CSS, and JS.
 
 ## Embed
 
-Use this code if you want to embed the music player on your site.
+Use this code if you want to embed the music player on your site without forking.
 
 ```
 <style>

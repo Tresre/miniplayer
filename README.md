@@ -7,13 +7,11 @@ Use this code if you want to embed the demo music player on your site.
 
 ### CSS
 ```
-<style>
 .musicembed {
   position: fixed;
   bottom: 10px;
   right: 10px;
 }
-</style>
 ```
 
 ### HTML

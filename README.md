@@ -1,9 +1,9 @@
 # Music
 Very simple music player made using HTML, CSS, and JS.
 
-### Embed
+## Embed
 
-Use this embed to link to add to a site.
+Use this code to embed on your site.
 
 ```
 <style>

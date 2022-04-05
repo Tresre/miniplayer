@@ -33,9 +33,9 @@ function chooseSong(p) {
       music.currentTime = 0;
       var checkBox = document.getElementById("musicMute");
       if (checkBox.checked == true) {
-        music.volume = 1;
+        music.muted = false;
       } else {
-        music.volume = 0;
+        music.muted = true;
       }
     }
   }
@@ -46,11 +46,12 @@ function musicVolume(vol) {
   var setmusic = music;
   if (vol === undefined) {
   	if (checkBox.checked == true) {
-      setmusic.volume = 1;
+      setmusic.muted = false;
     } else {
-      setmusic.volume = 0;
+      setmusic.muted = true;
     }
   } else {
+    setmusic.muted = false;
     setmusic.volume = vol;
   }
 }

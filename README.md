@@ -1,7 +1,7 @@
 # Music Player
 Very simple music player made using HTML, CSS, and JS.
 
-## Embed
+## Demo
 
 Use this code if you want to embed the demo music player on your site.
 

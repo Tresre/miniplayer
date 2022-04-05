@@ -38,7 +38,6 @@
   background-color: #1e1e1e;
   border: 5px solid #1e1e1e;
 }
-
 .playtoggle {
   position: relative;
   display: inline-block;
@@ -50,16 +49,12 @@
   transition: .4s;
   left: -20px;
 }
-
 .play input { 
   visibility: hidden;
 }
-
 input:checked + .playtoggle {
   background-color: #2196F3;
-  
 }
-
 .button {
   position: absolute;
   display: inline-block;
@@ -67,11 +62,9 @@ input:checked + .playtoggle {
   height: 0px;
   left: 110px;
 }
-
 .button input { 
   visibility: hidden;
 }
-
 .bslider {
   position: absolute;
   cursor: pointer;
@@ -81,7 +74,6 @@ input:checked + .playtoggle {
   height: 90px;
   border-radius: 34px;
 }
-
 .bslider:before {
   position: absolute;
   content: "";
@@ -94,15 +86,12 @@ input:checked + .playtoggle {
   transition: .4s;
   border-radius: 50%;
 }
-
 input:checked + .bslider {
   background-color: #2196F3;
 }
-
 input:focus + .bslider {
   box-shadow: 0 0 1px #2196F3;
 }
-
 input:checked + .bslider:before {
   -webkit-transform: translateY(-58px);
   -ms-transform: translateY(-58px);

@@ -5,9 +5,16 @@ chooseSong(0);
 function chooseSong(p) {
   var lastSong = songChoice;
   var playlist = [
-  "Down In Kokomo",
-  "Send Me An Angel",
-  "Gotta Get Up"
+  "All About You",
+  "All Alone",
+  "Heat Waves",
+  "Live In The Moment",
+  "Nice To Meet Ya",
+  "No Rest For The Wicked",
+  "Only Human",
+  "Sunflower",
+  "Talk",
+  "Thunder"
   ];
 
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];

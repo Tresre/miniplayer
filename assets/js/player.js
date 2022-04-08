@@ -36,7 +36,9 @@ function chooseSong(p) {
     };
 
     if (p === 1) {
-      music.play();
+      if (!music.paused) {
+        music.play();
+      }
       music.currentTime = 0;
       var checkBox = document.getElementById("musicMute");
       if (checkBox.checked == true) {

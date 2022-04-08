@@ -20,8 +20,8 @@ function chooseSong(p) {
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
   
   var setmusic = music;
-  alert(setmusic);
-  alert(setmusic.paused);
+  console.log("setmusic" + setmusic);
+  console.log("setmusicp" + setmusic.paused);
   if (setmusic !== undefined) {
   	setmusic.pause();
   }
@@ -33,8 +33,8 @@ function chooseSong(p) {
     songChoice = (randomItem);
     document.getElementById("songChoice").innerHTML = songChoice;
     music = document.getElementById(randomItem);
-    alert(music);
-    alert(music.paused);
+    console.log("music" + music);
+    console.log("musicp" + music.paused);
     music.onended = function() {
       chooseSong(1);
     };

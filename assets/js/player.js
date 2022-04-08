@@ -36,7 +36,9 @@ function chooseSong(p) {
     };
 
     if (p === 1) {
-      if (setmusic.paused == false) {
+      if (music.paused == false) {
+        alert(setmusic + "and" + setmusic.paused);
+        alert(music + "and" + music.paused);
         music.play();
       }
       music.currentTime = 0;

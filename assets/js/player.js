@@ -20,8 +20,6 @@ function chooseSong(p) {
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
   
   var setmusic = music;
-  console.log(setmusic);
-  console.log(setmusic.paused);
   if (setmusic !== undefined) {
   	setmusic.pause();
   }
@@ -33,16 +31,12 @@ function chooseSong(p) {
     songChoice = (randomItem);
     document.getElementById("songChoice").innerHTML = songChoice;
     music = document.getElementById(randomItem);
-    console.log(music);
-    console.log(music.paused);
     music.onended = function() {
       chooseSong(1);
     };
 
     if (p === 1) {
-      if (music.paused == false) {
-        music.play();
-      }
+      music.play();
       music.currentTime = 0;
       var checkBox = document.getElementById("musicMute");
       if (checkBox.checked == true) {

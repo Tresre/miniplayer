@@ -36,7 +36,7 @@ function chooseSong(p) {
     };
 
     if (p === 1) {
-      if (!music.paused) {
+      if (music.paused == false) {
         music.play();
       }
       music.currentTime = 0;

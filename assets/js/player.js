@@ -5,16 +5,16 @@ chooseSong(0);
 function chooseSong(p) {
   var lastSong = songChoice;
   var playlist = [
-  "All About You",
-  "All Alone",
-  "Heat Waves",
-  "Live In The Moment",
-  "Nice To Meet Ya",
-  "No Rest For The Wicked",
-  "Only Human",
-  "Sunflower",
-  "Talk",
-  "Thunder"
+  "All_About_You$The_Knocks",
+  "All_Alone$Fun",
+  "Heat_Waves$Glass_Animals",
+  "Live_In_The_Moment$Portugal",
+  "Nice_To_Meet_Ya$Niall_Horan",
+  "No_Rest_For_The_Wicked$Cage_The_Elephant",
+  "Only_Human$Jonas_Brothers",
+  "Sunflower$Post_Malone",
+  "Talk$Two_Door_Cinema",
+  "Thunder$SHAED"
   ];
 
   var randomItem = playlist[Math.floor(Math.random()*playlist.length)];
@@ -28,9 +28,13 @@ function chooseSong(p) {
     chooseSong(1);
     return;
   } else {
-    songChoice = randomItem;
+    songName = randomItem;
+    const splitSong = songName.split("$");
+    songChoice = splitSong[0];
+    songChoice.replace("_", " ");
     document.getElementById("songChoice").innerHTML = songChoice;
     music = document.getElementById(randomItem);
+    var music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
     music.onended = function() {
       chooseSong(1);
     };

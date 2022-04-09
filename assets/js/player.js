@@ -30,6 +30,11 @@ function chooseSong(p) {
   } else {
     songChoice = randomItem;
     console.log(playlist.indexOf(songChoice));
+    index = playlist.indexOf(songChoice);
+    
+    window[songChoice]++;
+    console.log(window[songChoice]); 
+    
     const splitSong = songChoice.split("$");
     songName = splitSong[0];
     songName = songName.replace(/_/g, " ");

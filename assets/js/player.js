@@ -36,8 +36,6 @@ function chooseSong(p) {
     };
 
     if (p === 1) {
-      console.log(document.getElementById("musicToggle").checked);
-      alert(document.getElementById("musicToggle").checked);
       if (document.getElementById("musicToggle").checked == true) {
         music.play();
         music.currentTime = 0;

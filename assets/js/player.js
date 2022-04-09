@@ -32,7 +32,9 @@ function chooseSong(p) {
     console.log(playlist.indexOf(songChoice));
     index = playlist.indexOf(songChoice);
     
-    
+    if (window[songChoice] == undefined) {
+  	  window[songChoice] = 0;
+    }
     window[songChoice] = ++window[songChoice];
     console.log(songChoice + ' - ' + window[songChoice]); 
     

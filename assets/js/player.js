@@ -28,11 +28,11 @@ function chooseSong(p) {
     chooseSong(1);
     return;
   } else {
-    songName = randomItem;
-    const splitSong = songName.split("$");
-    songChoice = splitSong[0];
-    songChoice.replace("_", " ");
-    document.getElementById("songChoice").innerHTML = songChoice;
+    songChoice = randomItem;
+    const splitSong = songChoice.split("$");
+    songName = splitSong[0];
+    songName.replace("_", " ");
+    document.getElementById("songChoice").innerHTML = songName;
     music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
     music.onended = function() {
       chooseSong(1);

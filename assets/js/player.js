@@ -36,15 +36,11 @@ function chooseSong(p) {
     };
 
     if (p === 1) {
-      music.currentTime = 0;
-      var playButton = document.getElementById("musicToggle");
-      if (playButton.checked == true) {
+      if (document.getElementById("musicToggle").checked == true) {
         music.play();
-      } else {
-        music.pause();
+        music.currentTime = 0;
       }
-      var checkBox = document.getElementById("musicMute");
-      if (checkBox.checked == true) {
+      if (document.getElementById("musicMute").checked == true) {
         music.muted = false;
       } else {
         music.muted = true;

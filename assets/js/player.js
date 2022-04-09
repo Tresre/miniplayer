@@ -37,6 +37,7 @@ function chooseSong(p) {
 
     if (p === 1) {
       music.play();
+      document.getElementById("musicToggle").checked = true;
       music.currentTime = 0;
       var checkBox = document.getElementById("musicMute");
       if (checkBox.checked == true) {

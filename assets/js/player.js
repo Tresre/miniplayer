@@ -33,7 +33,7 @@ function chooseSong(p) {
     index = playlist.indexOf(songChoice);
     
     window[songChoice]++;
-    console.log(window[songChoice]); 
+    console.log(songChoice + ' - ' + window[songChoice]); 
     
     const splitSong = songChoice.split("$");
     songName = splitSong[0];

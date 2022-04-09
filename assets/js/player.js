@@ -29,7 +29,7 @@ function chooseSong(p) {
     return;
   } else {
     songChoice = randomItem;
-    console.log(playlist.indexOf('songChoice'));
+    console.log(playlist.indexOf(songChoice));
     const splitSong = songChoice.split("$");
     songName = splitSong[0];
     songName = songName.replace(/_/g, " ");

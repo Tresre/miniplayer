@@ -25,10 +25,10 @@ function chooseSong(p) {
   }
   
   if (lastSong === randomItem) {
-  	chooseSong(1);
+    chooseSong(1);
     return;
   } else {
-    songChoice = (randomItem);
+    songChoice = randomItem;
     document.getElementById("songChoice").innerHTML = songChoice;
     music = document.getElementById(randomItem);
     music.onended = function() {

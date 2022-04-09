@@ -4,6 +4,7 @@ chooseSong(0);
 
 function chooseSong(p) {
   var lastSong = songChoice;
+  var lastIndex = window[songChoice];
   var playlist = [
   "All_About_You$The_Knocks",
   "All_Alone$Fun",
@@ -37,6 +38,9 @@ function chooseSong(p) {
     }
     window[songChoice] = ++window[songChoice];
     console.log(songChoice + ' - ' + window[songChoice]); 
+    if (window[songChoice] <= lastIndex) {
+  	  console.log("lessthanequalto");
+    }
     
     const splitSong = songChoice.split("$");
     songName = splitSong[0];

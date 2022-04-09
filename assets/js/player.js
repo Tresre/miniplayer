@@ -31,7 +31,7 @@ function chooseSong(p) {
     songChoice = randomItem;
     const splitSong = songChoice.split("$");
     songName = splitSong[0];
-    songName.replace(/_/g, " ");
+    songName = songName.replace(/_/g, " ");
     document.getElementById("songChoice").innerHTML = songName;
     music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
     music.onended = function() {

@@ -33,8 +33,7 @@ function chooseSong(p) {
     songChoice = splitSong[0];
     songChoice.replace("_", " ");
     document.getElementById("songChoice").innerHTML = songChoice;
-    music = document.getElementById(randomItem);
-    var music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
+    music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
     music.onended = function() {
       chooseSong(1);
     };

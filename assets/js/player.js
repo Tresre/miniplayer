@@ -1,6 +1,6 @@
 var music;
 var songChoice;
-const songs = [music];
+const songs = ["undefined"];
 chooseSong(0);
 
 function chooseSong(p) {

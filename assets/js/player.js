@@ -43,6 +43,9 @@ function chooseSong(p) {
     if (playedSongs.includes(songChoice) === true) {
   	  console.log("skipsong");
       chooseSong(1);
+      if (playedSongs.length === playlist.length) {
+        playedSongs = [];
+      }
       return;
     } else {
       const splitSong = songChoice.split("$");

@@ -50,6 +50,9 @@ function chooseSong(p) {
     music.onended = function() {
       chooseSong(1);
     };
+    
+    songs.push(songChoice);
+    console.log(songs);
 
     if (p === 1) {
       if (document.getElementById("musicToggle").checked == true) {

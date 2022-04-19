@@ -31,38 +31,41 @@ function chooseSong(p) {
     return;
   } else {
     songChoice = randomItem;
+    
     console.log(playlist.indexOf(songChoice));
     index = playlist.indexOf(songChoice);
-    
     if (window[songChoice] == undefined) {
   	  window[songChoice] = 0;
     }
     window[songChoice] = ++window[songChoice];
     console.log(songChoice + ' - ' + window[songChoice]); 
-    if (window[songChoice] <= lastIndex) {
-  	  console.log("lessthanequalto");
-    }
     
-    const splitSong = songChoice.split("$");
-    songName = splitSong[0];
-    songName = songName.replace(/_/g, " ");
-    document.getElementById("songChoice").innerHTML = songName;
-    music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
-    playedSongs.push(songChoice);
-    console.log(playedSongs);
-    music.onended = function() {
+    if (playedSongs.includes(songChoice) === true) {
+  	  console.log("skipsong");
       chooseSong(1);
-    };
+      return;
+    } else {
+      const splitSong = songChoice.split("$");
+      songName = splitSong[0];
+      songName = songName.replace(/_/g, " ");
+      document.getElementById("songChoice").innerHTML = songName;
+      music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
+      playedSongs.push(songChoice);
+      console.log(playedSongs);
+      music.onended = function() {
+        chooseSong(1);
+      };
 
-    if (p === 1) {
-      if (document.getElementById("musicToggle").checked == true) {
-        music.play();
-        music.currentTime = 0;
-      }
-      if (document.getElementById("musicMute").checked == true) {
-        music.muted = false;
-      } else {
-        music.muted = true;
+      if (p === 1) {
+        if (document.getElementById("musicToggle").checked == true) {
+          music.play();
+          music.currentTime = 0;
+        }
+        if (document.getElementById("musicMute").checked == true) {
+          music.muted = false;
+        } else {
+          music.muted = true;
+        }
       }
     }
   }

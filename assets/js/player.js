@@ -32,8 +32,6 @@ function chooseSong(p) {
   } else {
     songChoice = randomItem;
     
-    console.log(playlist.indexOf(songChoice));
-    index = playlist.indexOf(songChoice);
     if (window[songChoice] == undefined) {
   	  window[songChoice] = 0;
     }
@@ -41,7 +39,6 @@ function chooseSong(p) {
     console.log(songChoice + ' - ' + window[songChoice]); 
     
     if (playedSongs.includes(songChoice) === true) {
-  	  console.log("skipsong");
       chooseSong(1);
       if (playedSongs.length === playlist.length) {
         playedSongs = [];

@@ -32,12 +32,6 @@ function chooseSong(p) {
   } else {
     songChoice = randomItem;
     
-    if (window[songChoice] == undefined) {
-  	  window[songChoice] = 0;
-    }
-    window[songChoice] = ++window[songChoice];
-    console.log(songChoice + ' - ' + window[songChoice]); 
-    
     if (playedSongs.includes(songChoice) === true) {
       chooseSong(1);
       if (playedSongs.length === playlist.length) {
@@ -52,6 +46,13 @@ function chooseSong(p) {
       music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
       playedSongs.push(songChoice);
       console.log(playedSongs);
+      
+      if (window[songChoice] == undefined) {
+  	    window[songChoice] = 0;
+      }
+      window[songChoice] = ++window[songChoice];
+      console.log(songChoice + ' - ' + window[songChoice]); 
+      
       music.onended = function() {
         chooseSong(1);
       };

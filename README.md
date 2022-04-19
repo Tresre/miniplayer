@@ -17,6 +17,6 @@ Use this code if you want to embed the demo mini music player on your site.
 ### HTML
 ```
 <div class="musicembed">
-  <iframe style="border-radius: 90px;" width="310px" height="130px" scrolling="no" src="https://tresre.dev/music" title="Music" frameborder="0"></iframe>
+  <iframe style="border-radius: 90px;" width="310px" height="130px" scrolling="no" src="https://tresre.dev/miniplayer" title="Music" frameborder="0"></iframe>
 </div>
 ```

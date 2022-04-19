@@ -1,5 +1,6 @@
 var music;
 var songChoice;
+const songs;
 chooseSong(0);
 
 function chooseSong(p) {
@@ -47,12 +48,11 @@ function chooseSong(p) {
     songName = songName.replace(/_/g, " ");
     document.getElementById("songChoice").innerHTML = songName;
     music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
+    songs.push(songChoice);
+    console.log("songs-" + songs);
     music.onended = function() {
       chooseSong(1);
     };
-    
-    songs.push(songChoice);
-    console.log(songs);
 
     if (p === 1) {
       if (document.getElementById("musicToggle").checked == true) {

@@ -1,6 +1,6 @@
 var music;
 var songChoice;
-const songs;
+const songs = [music];
 chooseSong(0);
 
 function chooseSong(p) {

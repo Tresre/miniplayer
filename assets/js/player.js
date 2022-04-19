@@ -43,7 +43,7 @@ function chooseSong(p) {
       songName = splitSong[0];
       songName = songName.replace(/_/g, " ");
       document.getElementById("songChoice").innerHTML = songName;
-      music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
+      music = new Audio('https://tresre.dev/miniplayer/assets/mp3/' + randomItem + '.mp3');
       playedSongs.push(songChoice);
       console.log(playedSongs);
       

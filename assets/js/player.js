@@ -1,6 +1,6 @@
 var music;
 var songChoice;
-const songs = ["undefined"];
+playedSongs = [];
 chooseSong(0);
 
 function chooseSong(p) {
@@ -48,8 +48,8 @@ function chooseSong(p) {
     songName = songName.replace(/_/g, " ");
     document.getElementById("songChoice").innerHTML = songName;
     music = new Audio('https://tresre.dev/music/assets/mp3/' + randomItem + '.mp3');
-    songs.push(songChoice);
-    console.log("songs-" + songs);
+    playedSongs.push(songChoice);
+    console.log(playedSongs);
     music.onended = function() {
       chooseSong(1);
     };

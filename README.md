@@ -1,9 +1,9 @@
 # Music Player
-Very simple music player made using HTML, CSS, and JS.
+Simple mini music player made using HTML, CSS, and JS.
 
 ## Demo
 
-Use this code if you want to embed the demo music player on your site.
+Use this code if you want to embed the demo mini music player on your site.
 
 ### CSS
 ```

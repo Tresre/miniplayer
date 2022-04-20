@@ -1,4 +1,4 @@
-# Music Player
+# Mini Music Player
 Simple mini music player made using HTML, CSS, and JS.
 
 ## Demo

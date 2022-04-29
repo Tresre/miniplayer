@@ -3,7 +3,9 @@ Simple mini music player made using HTML, CSS, and JS.
 
 ## Demo
 
-Use this code if you want to embed the demo mini music player on your site.
+https://tresre.dev/miniplayer
+
+You can use the code below if you want to embed the demo mini music player on your site.
 
 ### CSS
 ```
